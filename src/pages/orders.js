@@ -62,7 +62,7 @@ export async function getServerSideProps(context){
     .get();
 
     //stripe orders info
-
+    
     const orders = await Promise.all(
         stripeOrders.docs.map(async (order) =>({
             id : order.id,
